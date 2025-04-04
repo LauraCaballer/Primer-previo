@@ -17,26 +17,6 @@ public class habitaciones {
     private double price;
     private int capacity;
 
-    @OneToMany(mappedBy = "habitacion", cascade = CascadeType.ALL)
-    private Reserva reserva;
 
-    public void createRoom(String type, double price, int capacity) {
 
-    }
-
-    public void getRoomById(Long id){
-
-    }
-
-    public void getAllRooms(){
-
-    }
-
-    public void updateRoom(Long id, String type, double price, int capacity) {
-
-    }
-
-    public void deleteRoom(Long id) {
-
-    }
 }

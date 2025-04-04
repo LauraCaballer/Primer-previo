@@ -14,25 +14,10 @@ public class reservas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
+    @ManyToOne
+    @JoinColumn(name = "cliente_id", nullable = false)
+    private clientes cliente;
 
 
-    public void createReservation(Long customerId, Long roomId, LocalDate startDate, LocalDate endDate) {
 
-    }
-
-    public void getReservationById(Long reservationId) {
-
-    }
-
-    public void getReservationByCustomer(Long customerId) {
-
-    }
-
-    public void getReservationByRoom(Long roomId) {}
-
-    public void updateReservationDates(Long reservationId, LocalDate newStartDate, LocalDate newEndDate) {
-
-    }
-
-    public void cancelReservation(Long reservationId) {}
 }
