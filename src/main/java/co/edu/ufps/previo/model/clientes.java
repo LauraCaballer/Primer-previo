@@ -2,6 +2,8 @@ package co.edu.ufps.previo.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -16,27 +18,7 @@ public class clientes {
     String phoneNumber;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private List<Reservas> reservas = new ArrayList<>();
-
-
-
-    public void createCustomer(String name, String email, String phoneNumber){
-
-    }
-
-    public void getCustomerById(long id){
-
-    }
-
-    public void getAllCustomers(){
-
-    }
-
-    public void updateCustomer(long id, String name, String email, String phoneNumber){
-
-    }
-
-    public void deleteCustomer(long id){}
+    private List<reservas> reservas;
 
 
 }
